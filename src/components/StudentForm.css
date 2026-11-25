@@ -1,0 +1,90 @@
+.student-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.student-form h2 {
+  text-align: center;
+  font-size: 20px;
+  margin: 0;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #7a1020;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: blue;
+}
+
+/* champ invalide, affiché seulement après interaction */
+.form-group input:user-invalid,
+.form-group select:user-invalid {
+  border-color: #d32f2f;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.btn-submit,
+.btn-reset {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-submit {
+  background-color: #2d3a80;
+  color: #fff;
+}
+
+.btn-reset {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.btn-submit:hover {
+  background-color: #1f2a5c;
+}
+
+.btn-reset:hover {
+  background-color: #cfcfcf;
+}

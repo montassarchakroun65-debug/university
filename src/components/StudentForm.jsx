@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./StudentForm.css";
 
 function StudentForm({ onAjouterEtudiant }) {
-  // Un état par champ du formulaire (composants contrôlés)
   const [nom, setNom] = useState("");
   const [prenom, setPrenom] = useState("");
   const [email, setEmail] = useState("");
@@ -14,10 +13,8 @@ function StudentForm({ onAjouterEtudiant }) {
   const [image, setImage] = useState("");
 
   function handleSubmit(e) {
-    // empêche le rechargement de la page
     e.preventDefault();
 
-    // regroupe les informations saisies dans un objet
     const nouvelEtudiant = {
       nom: nom.trim(),
       prenom: prenom.trim(),
@@ -32,10 +29,8 @@ function StudentForm({ onAjouterEtudiant }) {
 
     console.log("Nouvel étudiant ajouté :", nouvelEtudiant);
 
-    // envoie l'étudiant au composant parent (App)
     onAjouterEtudiant(nouvelEtudiant);
 
-    // vide le formulaire (états + champ fichier)
     setNom("");
     setPrenom("");
     setEmail("");
@@ -170,9 +165,8 @@ function StudentForm({ onAjouterEtudiant }) {
           name="image"
           accept="image/*"
           onChange={(e) => {
-            const fichier = e.target.files[0]; // récupère l'image choisie
+            const fichier = e.target.files[0]; 
             if (fichier) {
-              // crée une URL temporaire pour afficher l'image
               setImage(URL.createObjectURL(fichier));
             }
           }}

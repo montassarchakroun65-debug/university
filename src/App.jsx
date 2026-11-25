@@ -46,23 +46,20 @@ function App() {
       anneeEtude: "2ème année",
       groupe: "LBC 2",
       image: maremImage,
-      // pas de ville -> valeur par défaut dans StudentCard
     },
   ]);
 
   const [recherche, setRecherche] = useState("");
-  // TP4 : le formulaire est affiché ou masqué avec cet état
   const [afficherFormulaire, setAfficherFormulaire] = useState(false);
 
-  // TP4 : reçoit l'étudiant envoyé par StudentForm
   function ajouterEtudiant(nouvelEtudiant) {
     const etudiantAvecId = {
       ...nouvelEtudiant,
-      id: Date.now(), // identifiant unique
+      id: Date.now(), 
     };
 
     setEtudiants((anciensEtudiants) => [...anciensEtudiants, etudiantAvecId]);
-    setAfficherFormulaire(false); // referme le formulaire après l'ajout
+    setAfficherFormulaire(false); 
   }
 
   function supprimerEtudiant(id) {

@@ -1,10 +1,8 @@
 import { useState } from "react";
 
 function StudentCard(props) {
-  // état : au départ les coordonnées sont masquées
   const [coordonneesVisibles, setCoordonneesVisibles] = useState(false);
 
-  // valeur par défaut si la ville n'est pas fournie
   const ville = props.ville || "Non renseignée";
 
   function basculerCoordonnees() {
